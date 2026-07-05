@@ -1,10 +1,12 @@
 name: Release
 
-# Builds happen whenever a version tag like "v1.0.0" is pushed.
+# Builds happen whenever a version tag like "v1.0.0" is pushed,
+# or manually via the "Run workflow" button in the Actions tab.
 on:
   push:
     tags:
       - "v*.*.*"
+  workflow_dispatch:
 
 permissions:
   contents: write
